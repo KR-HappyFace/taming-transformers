@@ -507,8 +507,8 @@ if __name__ == "__main__":
             # default_modelckpt_cfg["params"]["val_check_interval"] = 0.25
             default_modelckpt_cfg["params"]["monitor"] = model.monitor
             default_modelckpt_cfg["params"]["save_top_k"] = 3
-            default_modelckpt_cfg["params"]["mode"] = "min"
-            default_modelckpt_cfg["params"]["period"] = -1
+            # default_modelckpt_cfg["params"]["mode"] = "min"
+            # default_modelckpt_cfg["params"]["period"] = -1
 
         modelckpt_cfg = lightning_config.modelcheckpoint or OmegaConf.create()
         modelckpt_cfg = OmegaConf.merge(default_modelckpt_cfg, modelckpt_cfg)
